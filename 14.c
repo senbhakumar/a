@@ -1,24 +1,18 @@
 #include <stdio.h>
-int main()
+#include<conio.h>
+void main()
 {
-int low, high, i, flag;
-printf("Enter two numbers(intervals): ");
-scanf("%d %d", &low, &high);
-printf("Prime numbers between %d and %d are: ", low, high);
-while (low < high)
+int num,m ,n;
+clrscr();
+printf("Enter the first number range m");
+scanf("%d",&m);
+printf("Enter the second number range n:");
+scanf("%d",&n");
+printf("Print Odd Numbers in a given range m to n:\n");
+for (num = m; num <= n; num++)
 {
-flag = 0;
-for(i = 2; i <= low/2; ++i)
-{
-if (low % i == 0)
-{
-flag = 1;
-break;
+if (num % 2 == 1)
+printf ("%d ", num);
 }
-}
-if (flag == 0)
-printf("%d ", low);
-++low;
-}
-return 0;
+getch();
 }
